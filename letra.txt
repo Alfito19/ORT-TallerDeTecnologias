@@ -1,0 +1,64 @@
+Bash Scripting
+Deberá realizar un script de bash que al ejecutarse muestre un menú de opciones, el cual
+pasamos a describir:
+Menú
+Al ejecutar el script deberá mostrarse un menú de opciones.
+    Bienvenido!
+    1)Opción 1. Ingresar Usuario y Contraseña✅
+    2)Opción 2. Ingresar al sistema.✅
+    3)Salir del Sistema.✅
+Mediante el teclado, el usuario ingresa la opción deseada, en caso de no ser una opción
+válida muestra “no es una opción válida”. Este menú se repite luego de cada opción
+seleccionada (salvo salir).
+
+Opción 1
+Registra un nuevo usuario y su contraseña y se guarda en un archivo de texto a
+conveniencia. (Podemos suponer que el usuario no existe previamente, pero pueden
+crearse más de un usuario).✅
+Opción 2
+ingresa al menú que mostraremos a continuación, luego de pedir usuario y contraseña, que
+deben haberse creado previamente.✅
+Opción 3
+Cierra el script✅
+
+En caso de ingresar al sistema,
+    Bienvenido nombreDeUsuario.
+    Usted ingresó por última vez el 11/5/2023
+        1) Cambiar Contraseña.✅
+        2) Escoger una letra.✅
+        3) Buscar palabras en el diccionario que finalicen con la letra
+        escogida.✅
+        4) Contar las palabras de la Opción 3.✅
+        5) Guardar las palabras en un archivo.txt, en conjunto con la
+        fecha y hora de realizado el informe.✅
+        6) Volver al Menú Principal.✅
+
+(nombreDeUsuario) es el usuario elegido para ingresar y muestra fecha o fecha/hora del
+último ingreso (puede utilizar los archivos que desee para cumplir esto último).
+
+Opción 1
+Reemplaza la contraseña existente.
+
+Opción 2
+Simplemente lee la letra y la guarda en una variable (la misma sigue viva durante el correr
+de la sección), luego vuelve al menú.
+
+Opción 3.
+Lee el archivo del diccionario y se queda con las palabras que comienzan de la letra
+escogida
+(en caso de no haber ingresado la opción 2, el sistema busca con la letra a)
+
+Opción 4.
+Muestra en pantalla la cantidad de palabras que cumplen la característica de la opción 3.
+
+Opción 5
+Volcar las palabras del informe (parte 3) en un archivo de texto
+
+Opción 6
+Vuelve al menú anterior
+
+Notas:
+● El diccionario está disponible en aulas.
+● Algunos conocimientos son vistos en clase, otros corren por cuenta del alumno
+investigarlos.
+● Entregar un script que cumpla los requerimientos.
