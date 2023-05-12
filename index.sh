@@ -1,7 +1,11 @@
 #!/bin/bash
+
+# Entrega de: 318112 - Mateo Cabrera | 257620 - Joaquin Hernandez | 305968 - Alfonso Saizar 
+
 actualDate=$( date +%x) >/dev/null
 actualHour=`date +"%H:%M"` >/dev/null
 opcionLetra=a >/dev/null
+echo "" >> usuarios.txt
 bienvenida(){
     echo -e "\nBienvenido! \n1)Registrar Usuario. \n2)Ingresar al sistema. \n3)Salir del sistema"
     read opcion
@@ -163,3 +167,5 @@ guardarPalabras () {
     menu2
 }
 bienvenida
+
+# Entrega de: 318112 - Mateo Cabrera | 257620 - Joaquin Hernandez | 305968 - Alfonso Saizar 
