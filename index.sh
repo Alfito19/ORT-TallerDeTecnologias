@@ -1,5 +1,6 @@
 #!/bin/bash
 actualDate=$( date +%x) >/dev/null
+actualHour=`date +"%H:%M"` >/dev/null
 opcionLetra=a >/dev/null
 bienvenida(){
     echo -e "\nBienvenido! \n1)Registrar Usuario. \n2)Ingresar al sistema. \n3)Salir del sistema"
@@ -86,7 +87,7 @@ op2 () {
 }
 
 menu2(){
-    echo -e "1) Cambiar Contraseña. \n2) Escoger una letra (actualmente $opcionLetra) \n3) Buscar palabras en el diccionario que finalicen con la letra escogida. \n4) Contar las palabras de la Opcion 3. \n5) Guardar las palabras en un archivo.txt, en conjunto con la fecha y hora de realizado el informe. \n6) Volver al menu principal."
+    echo -e "1) Cambiar Contraseña. \n2) Escoger una letra (actualmente $opcionLetra) \n3) Buscar palabras en el diccionario que comiencen con la letra escogida. \n4) Contar las palabras de la Opcion 3. \n5) Guardar las palabras en un archivo.txt, en conjunto con la fecha y hora de realizado el informe. \n6) Volver al menu principal."
     read opcionMenu2
         case $opcionMenu2 in
         1)
@@ -99,7 +100,7 @@ menu2(){
         read opcionLetra
         menu2
         ;;
-
+        #utilizamos la primer letra de cada palabra como parámetro de búsqueda
         3)
         buscarDiccionario
         menu2
@@ -140,7 +141,8 @@ cambiarContrasena(){
             op=0
         fi
     done
-    sed -i "${lugar}s/$cActual/$cNueva/" usuarios.txt
+    sed -i "${lugar}s/$cActual/$cNueva/" usuarios.txt 
+    #find ./ -type f -exec sed -i '' -e "${lugar}s/$cActual/$cNueva/" usuarios.txt \; #opcion mac
     echo -e "Se ha actualizado la contraseña con éxito.\n"
 }
 
@@ -155,10 +157,9 @@ contarPalabras () {
 }
 
 guardarPalabras () {
-    echo $actualDate >> palabrasGuardadas.txt
-    grep "^$opcionLetra" diccionario.txt > palabrasGuardadas.txt
+    echo $actualDate,$actualHour > palabrasGuardadas.txt
+    grep "^$opcionLetra" diccionario.txt >> palabrasGuardadas.txt
     echo -e "\nListo!\n"
     menu2
 }
-
 bienvenida
