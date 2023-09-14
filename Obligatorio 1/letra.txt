@@ -38,7 +38,6 @@ En caso de ingresar al sistema,
 
 Opción 1
 Reemplaza la contraseña existente.
-Iflkjasjajkjnkadfjnadfjkn
 Opción 2
 Simplemente lee la letra y la guarda en una variable (la misma sigue viva durante el correr
 de la sección), luego vuelve al menú.
